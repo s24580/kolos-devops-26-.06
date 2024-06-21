@@ -1,0 +1,6 @@
+FROM jenkins/jenkins:lts
+
+USER root
+RUN apt-get update && apt-get install -y sudo nodejs npm
+RUN npm install -g eslint jest
+USER jenkins
